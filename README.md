@@ -30,7 +30,7 @@
 
 ## About The Project
 
-This the backend side of the full project that is intended to fullfill the task of Web Application Development subject. iNventory is an inventory management web app for people that need a tool to monitor their product stocks so their business' or store's buy and sell activity can be tracked and stay organized.
+This the backend side of the full project that is intended to fullfill the task of Integration of Application and Information. Ghostery is an hospital's inventory management web app for record and monitor entry and exit or buy and issue hospital equipment that is integrated with the hospital cashflow application.
 
 ### Built With
 
@@ -46,7 +46,7 @@ This is how to set up the projects in your local.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/sidqiaverroes/paw_inventaris.git
+   git clone https://github.com/MauraYufi/GhostInvent-BE
    ```
 2. Install NPM packages
    ```sh
@@ -80,10 +80,10 @@ This is how to set up the projects in your local.
 If you have a suggestion that would make this better, please fork the repo and create a pull request.
 Don't forget to give the project a star! Thanks!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+1. Fork  Project
+2. Create your Own Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Push to the Own Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -92,11 +92,10 @@ Don't forget to give the project a star! Thanks!
 
 | Name                  | NIM                |
 | --------------------- | ------------------ |
-| Ariq Tsaqif Aryasuta  | 20/460541/TK/51130 |
 | Azzahra Adine Divania | 20/463595/TK/51587 |
-| Miftahul Jannah       | 20/456845/TK/50669 |
-| M Naufal Fadlurrahman | 20/456847/TK/50671 |
-| Sidqi Averroes        | 20/460568/TK/51157 |
+| Cicilia Widhi Astuti  | 20/456362/TK/50492 |
+| Dinda Sabela Rahma W  | 20/463598/TK/51590 |
+| Maura Yufi Septiani   | 20/463607/TK/51599 |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,22 +111,12 @@ Don't forget to give the project a star! Thanks!
 
 ## Link Github FE (Frontend)
  ```sh
-   https://github.com/sidqiaverroes/iNventory_FE.git
+   https://github.com/MauraYufi/GhostInvent-FE
    ``` 
 ## Link Slide Presentasi
  ```sh
-   https://drive.google.com/drive/folders/1eXvxnTVU27m9j9rkaYk4-vHx65c4kn9t?usp=share_link
+   https://github.com/MauraYufi/GhostInvent-BE
    ``` 
 
-## Link Web Aplikasi
-
-```sh
-   https://inventory-fe.vercel.app/
-   ```
-
-## Link Penilaian Kelompok
-```sh
-   https://docs.google.com/spreadsheets/d/1tMqtY5ZjAGyMaj7RTuwy_Bc1NXWZj_DXO3vyPC92bAQ/edit?usp=sharing
-   ```
  
 
