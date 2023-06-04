@@ -97,6 +97,8 @@ const updateProduct = asyncHandler(async (req, res) => {
 
   const product = await Product.findById(id);
 
+  const quantitybefore = parseInt(product.quantity);
+
   // if product doesnt exist
   if (!product) {
     res.status(404);
@@ -147,6 +149,23 @@ const updateProduct = asyncHandler(async (req, res) => {
       runValidators: true,
     }
   );
+  const balance = await Balance.findById("647c36f043150933c53950b5");
+
+    if (!balance) {
+      console.log("Saldo tidak ditemukan");
+      return;
+    }
+    let difference = parseInt(quantity) - quantitybefore;
+
+    if(difference>0){
+      const updatedBalance = parseInt(balance.balance) - (parseInt(price) * difference);
+      // Mengupdate data saldo dengan nilai yang telah dikurangi
+      balance.balance = updatedBalance;
+      await balance.save();
+    }
+    
+    console.log("Saldo berhasil diperbarui:", balance);
+    console.log("test")
 
   res.status(200).json(updatedProduct);
 });
