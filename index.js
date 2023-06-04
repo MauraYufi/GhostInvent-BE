@@ -9,6 +9,7 @@ const contactRoute = require("./routes/contactRoute");
 const errorHandler = require("./middleware/errorMiddleware");
 const cookieParser = require("cookie-parser");
 const path = require("path");
+const balanceRoute = require("./routes/balanceRoute")
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/contactus", contactRoute);
+app.use("/api/balances", balanceRoute);
 
 // Routes
 app.get("/", (req, res) => {
