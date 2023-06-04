@@ -1,7 +1,9 @@
 const asyncHandler = require("express-async-handler");
 const Product = require("../models/productModel");
+const Balance = require("../models/balanceModel");
 const { fileSizeFormatter } = require("../utils/fileUpload");
 const cloudinary = require("cloudinary").v2;
+const mongoose = require('mongoose');
 
 // Create Prouct
 const createProduct = asyncHandler(async (req, res) => {
@@ -23,6 +25,21 @@ const createProduct = asyncHandler(async (req, res) => {
       desc,
       image,
     });
+    const balance = await Balance.findById("647c36f043150933c53950b5");
+
+    if (!balance) {
+      console.log("Saldo tidak ditemukan");
+      return;
+    }
+
+    const updatedBalance = parseInt(balance.balance) - (parseInt(price) * parseInt(quantity));
+
+    // Mengupdate data saldo dengan nilai yang telah dikurangi
+    balance.balance = updatedBalance;
+    await balance.save();
+
+    console.log("Saldo berhasil diperbarui:", balance);
+    console.log("test")
 
     res.status(201).json(newProduct);
   } catch (error) {

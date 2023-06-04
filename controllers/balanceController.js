@@ -7,9 +7,12 @@ const getBalances = asyncHandler(async (req, res) => {
   res.status(200).json(balances);
 });
 
+// const addBalance
 
 const updateBalances = asyncHandler(async (req, res) => {
   const { balance } = req.body;
+
+  // const {balanceTotal} = Balance.balance;
 
   // Update the balance in MongoDB
   const updatedBalance = await Balance.findOneAndUpdate(
@@ -17,6 +20,8 @@ const updateBalances = asyncHandler(async (req, res) => {
     { balance },
     { new: true }
   );
+
+  // const balanceSummary = await Balance.
 
   if (!updatedBalance) {
     return res.status(404).json({ error: "Balance not found" });
